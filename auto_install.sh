@@ -5,8 +5,17 @@ SCRIPT_DIR="$( cd "$( dirname "${BASH_SOURCE[0]}" )" && pwd )"
 pushd . > /dev/null
 cd $SCRIPT_DIR
 
-git clone git://github.com/xmos/vocalfusion-rpi-setup.git
-git clone -b v1.4 git://github.com/xmos/avs-sdk-setup.git
+
+if [ ! -d vocalfusion-rpi-setup ]; then
+  git clone -b v1.0 git://github.com/xmos/vocalfusion-rpi-setup.git
+else
+  echo "Directory vocalfusion-rpi-setup already exists."
+fi
+if [ ! -d avs-sdk-setup ]; then
+  git clone -b v1.0 git://github.com/xmos/avs-sdk-setup.git
+else
+  echo "Directory avs-sdk-setup already exists."
+fi
 
 RPI_SETUP_DIR=$SCRIPT_DIR/vocalfusion-rpi-setup
 AVS_SETUP_DIR=$SCRIPT_DIR/avs-sdk-setup

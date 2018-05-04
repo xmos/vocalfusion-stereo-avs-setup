@@ -7,7 +7,7 @@ Combined with a Raspberry Pi running the Amazon Alexa Voice Service (AVS) Softwa
 To find out more, visit: https://xmos.com/vocalfusion-avs  
 and: https://developer.amazon.com/alexa-voice-service
 
-This respository provides a simple-to-use automated script to install the Amazon AVS SDK on a Raspberry Pi and configure the Raspberry Pi to use the **xCORE VocalFusion Stereo 4-Mic Kit for AVS** for audio.
+This repository provides a simple-to-use automated script to install the Amazon AVS SDK on a Raspberry Pi and configure the Raspberry Pi to use the **xCORE VocalFusion Stereo 4-Mic Kit for AVS** for audio.
 
 ## Prerequisites
 You will need:
@@ -33,7 +33,7 @@ Brief instructions and additional notes are below:
 
 1. Install Raspbian (Stretch) on the Raspberry Pi.
 
-2. Open a terminal on the Raspberry Pi and clone this respository:  
+2. Open a terminal on the Raspberry Pi and clone this repository:  
 `cd ~; git clone https://github.com/xmos/vocalfusion-stereo-avs-setup`
 
 3. Create a new Alexa device by following: https://github.com/alexa/alexa-avs-sample-app/wiki/Create-Security-Profile  
