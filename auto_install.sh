@@ -1,21 +1,32 @@
 #!/usr/bin/env bash
+pushd "$( dirname "${BASH_SOURCE[0]}" )" > /dev/null
+SETUP_DIR="$( pwd )"
+RPI_SETUP_DIR=$SETUP_DIR/vocalfusion-rpi-setup
+AVS_SETUP_DIR=$SETUP_DIR/avs-sdk-setup
 
-SCRIPT_DIR="$( cd "$( dirname "${BASH_SOURCE[0]}" )" && pwd )"
+if [ ! -d $RPI_SETUP_DIR ]; then
+  git clone -b v1.0 git://github.com/xmos/vocalfusion-rpi-setup.git
+elif ! git -C $RPI_SETUP_DIR diff-index --quiet HEAD --; then
+  echo "Changes found in $RPI_SETUP_DIR. Please revert changes, or delete directory, and then rerun."
+  echo "Exiting install script."
+  popd > /dev/null
+  return
+fi
 
-pushd . > /dev/null
-cd $SCRIPT_DIR
-
-git clone git://github.com/xmos/vocalfusion-rpi-setup.git
-git clone -b v1.4 git://github.com/xmos/avs-sdk-setup.git
-
-RPI_SETUP_DIR=$SCRIPT_DIR/vocalfusion-rpi-setup
-AVS_SETUP_DIR=$SCRIPT_DIR/avs-sdk-setup
+if [ ! -d $AVS_SETUP_DIR ]; then
+  git clone -b v1.5 git://github.com/xmos/avs-sdk-setup.git
+elif ! git -C $AVS_SETUP_DIR diff-index --quiet HEAD --; then
+  echo "Changes found in $AVS_SETUP_DIR. Please revert changes, or delete directory, and then rerun."
+  echo "Exiting install script."
+  popd > /dev/null
+  return
+fi
 
 # Execute (rather than source) the setup scripts
+echo "Installing VocalFusion Raspberry Pi Setup..."
 $RPI_SETUP_DIR/setup.sh
 
 echo "Installing Amazon AVS SDK..."
-
 $AVS_SETUP_DIR/setup.sh
 
 echo "Type 'sudo reboot' below to reboot the Raspberry Pi and complete the audio setup."
