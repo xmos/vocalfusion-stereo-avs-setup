@@ -5,7 +5,7 @@ RPI_SETUP_DIR=$SETUP_DIR/vocalfusion-rpi-setup
 AVS_SETUP_DIR=$SETUP_DIR/avs-sdk-setup
 
 if [ ! -d $RPI_SETUP_DIR ]; then
-  git clone -b v1.0 git://github.com/xmos/vocalfusion-rpi-setup.git
+  git clone -b v1.1 git://github.com/xmos/vocalfusion-rpi-setup.git
 elif ! git -C $RPI_SETUP_DIR diff-index --quiet HEAD --; then
   echo "Changes found in $RPI_SETUP_DIR. Please revert changes, or delete directory, and then rerun."
   echo "Exiting install script."
