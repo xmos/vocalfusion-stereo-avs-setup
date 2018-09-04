@@ -27,7 +27,7 @@ You will also need an Amazon Developer account: https://developer.amazon.com
 Setup your hardware by following the **Hardware Setup** at: https://www.xmos.com/published/vocalfusion-stereo-dev-kit-for-amazon-avs-hardware-setup-guide
 
 ## AVS SDK installation and Raspberry Pi audio setup
-Full instructions to install the AVS SDK on to a Raspberry Pi and configure the audio to use the **xCORE VocalFusion Stereo 4-Mic Kit for AVS** are detailed in the **Getting Started Guide** available from: http://www.xmos.com/published/vocalfusion-stereo-dev-kit-avs-quick-start-guide.
+Full instructions to install the AVS SDK on to a Raspberry Pi and configure the audio to use the **xCORE VocalFusion Stereo 4-Mic Kit for AVS** are detailed in the **Getting Started Guide** available from: http://www.xmos.com/published/vocalfusion-stereo-dev-kit-for-amazon-avs-getting-started-guide
 
 Brief instructions and additional notes are below:
 
