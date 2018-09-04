@@ -37,12 +37,11 @@ The **Getting Started Guide** available from http://www.xmos.com/published/vocal
 
 3. Register Alexa with AVS by following http://github.com/alexa/alexa-avs-sample-app/wiki/Create-Security-Profile.
 
-   Note: The *Allowed Origins* and *Allowed Return URLs* should be entered as **http**, not https.
+   Note: The *Allowed Origins* and *Allowed Return URLs* should be entered as **http**, not **https**.
 
    Note: It can be easier to configure your new Alexa device and Amazon developer account from a browser on your Raspberry Pi, as you can then easily copy the *ProductID*, *ClientID* and *ClientSecret* keys.
 
-4. Run the installation script: `source ~/vocalfusion-stereo-avs-setup/auto_install.sh`    
-Read and accept the AVS Device SDK license agreement.
+4. Run the installation script by entering `./auto_install.sh`. Read and accept the AVS Device SDK license agreement.
 
 5. You will be prompted enter your Alexa device details and asked whether you want the Sample App to run automatically when the Raspberry Pi boots.
 
