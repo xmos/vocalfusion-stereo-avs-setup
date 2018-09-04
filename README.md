@@ -27,17 +27,19 @@ You will also need an Amazon Developer account: https://developer.amazon.com
 Setup your hardware by following the **Hardware Setup** at: https://www.xmos.com/published/vocalfusion-stereo-dev-kit-for-amazon-avs-hardware-setup-guide
 
 ## AVS SDK installation and Raspberry Pi audio setup
-Full instructions to install the AVS SDK on to a Raspberry Pi and configure the audio to use the **xCORE VocalFusion Stereo 4-Mic Kit for AVS** are detailed in the **Getting Started Guide** available from: http://www.xmos.com/published/vocalfusion-stereo-dev-kit-for-amazon-avs-getting-started-guide
+The **Getting Started Guide** available from http://www.xmos.com/published/vocalfusion-stereo-dev-kit-for-amazon-avs-getting-started-guide details setup steps up until this point. What follows are setup steps specific to the AVS SDK.
 
-Brief instructions and additional notes are below:
+1. Install Raspbian (Stretch) on the Raspberry Pi as described in the Getting Started Guide.
 
-1. Install Raspbian (Stretch) on the Raspberry Pi.
+2. Clone the vocalfusion-stereo-avs-setup repository:
 
-2. Open a terminal on the Raspberry Pi and clone this repository:  
-`cd ~; git clone https://github.com/xmos/vocalfusion-stereo-avs-setup`
+   ```git clone https://github.com/xmos/vocalfusion-stereo-avs-setup```
 
-3. Create a new Alexa device by following: https://github.com/alexa/alexa-avs-sample-app/wiki/Create-Security-Profile  
-(Note: the *Allowed Origins* and *Allowed Return URLs* should use **http**, not https.)  
+3. Register Alexa with AVS by following http://github.com/alexa/alexa-avs-sample-app/wiki/Create-Security-Profile.
+
+   Note: The *Allowed Origins* and *Allowed Return URLs* should be entered as **http**, not https.
+
+   Note: It can be easier to configure your new Alexa device and Amazon developer account from a browser on your Raspberry Pi, as you can then easily copy the *ProductID*, *ClientID* and *ClientSecret* keys.
 
 4. Run the installation script: `source ~/vocalfusion-stereo-avs-setup/auto_install.sh`    
 Read and accept the AVS Device SDK license agreement.
