@@ -1,5 +1,10 @@
 # VocalFusion Raspberry Pi Setup Change Log
 
+## 1.5.1
+
+  * Moved some AVS-specific instructions from getting started guide document
+  * Added a check of SDK folder and version
+
 ## 1.5.0
 
   * Updated to AVS Device SDK v1.6. [See details here](https://github.com/xmos/avs-device-sdk/blob/xmos_v1.6/CHANGELOG.md).
