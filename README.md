@@ -31,25 +31,31 @@ The **Getting Started Guide** available from http://www.xmos.com/published/vocal
 
 1. Install Raspbian (Stretch) on the Raspberry Pi as described in the Getting Started Guide.
 
-2. Clone the vocalfusion-stereo-avs-setup repository:
+2. Ensure running kernel version matches headers kernel headers package. A typical system requires the following `--reinstall` command:
+
+   ```sudo apt-get install --reinstall raspberrypi-bootloader raspberrypi-kernel```
+
+   followed by a reboot.
+
+3. Clone the vocalfusion-stereo-avs-setup repository:
 
    ```git clone https://github.com/xmos/vocalfusion-stereo-avs-setup```
 
-3. Register Alexa with AVS by following http://github.com/alexa/alexa-avs-sample-app/wiki/Create-Security-Profile.
+4. Register Alexa with AVS by following http://github.com/alexa/alexa-avs-sample-app/wiki/Create-Security-Profile.
 
    Note: The *Allowed Origins* and *Allowed Return URLs* should be entered as **http**, not **https**.
 
    Note: It can be easier to configure your new Alexa device and Amazon developer account from a browser on your Raspberry Pi, as you can then easily copy the *ProductID*, *ClientID* and *ClientSecret* keys.
 
-4. Run the installation script by entering `./auto_install.sh`. Read and accept the AVS Device SDK license agreement.
+5. Run the installation script by entering `./auto_install.sh`. Read and accept the AVS Device SDK license agreement.
 
-5. You will be prompted enter your Alexa device details and asked whether you want the Sample App to run automatically when the Raspberry Pi boots. Your Alexa device details are the *ProductID*, the *ClientID* and *ClientSecret* keys as generated in the previous step. You will also be prompted to enter a serial number and define your location.
+6. You will be prompted enter your Alexa device details and asked whether you want the Sample App to run automatically when the Raspberry Pi boots. Your Alexa device details are the *ProductID*, the *ClientID* and *ClientSecret* keys as generated in the previous step. You will also be prompted to enter a serial number and define your location.
 
-6. Read and accept the Sensory license agreement. Wait for the script to complete the installation. The script is configuring the Raspberry Pi audio system, downloading and updating dependencies, building and configuring the AVS Device SDK. It takes around 30 minutes to complete.
+7. Read and accept the Sensory license agreement. Wait for the script to complete the installation. The script is configuring the Raspberry Pi audio system, downloading and updating dependencies, building and configuring the AVS Device SDK. It takes around 30 minutes to complete.
 
-7. As a final step, the script will open http://localhost:3000 in a browser on the Raspberry Pi. Enter your Amazon Developer credentials and close the browser window when prompted. (You won't have to do this if you already have a valid configuration file.) If you see a `400 Bad Request - HTTP` error it may be necessary to add http:// URLs to your device origins and return fields. To do this, go to your amazon developer AVS home page (https://developer.amazon.com/avs/home.html) and from `My products` select `manage` and then `security profile`. Now add http://localhost:3000 to the `Allowed origins` and http://localhost:3000/authresponse to the `Allowed return URLs`. Now refresh the browser window with the original error.
+8. As a final step, the script will open http://localhost:3000 in a browser on the Raspberry Pi. Enter your Amazon Developer credentials and close the browser window when prompted. (You won't have to do this if you already have a valid configuration file.) If you see a `400 Bad Request - HTTP` error it may be necessary to add http:// URLs to your device origins and return fields. To do this, go to your amazon developer AVS home page (https://developer.amazon.com/avs/home.html) and from `My products` select `manage` and then `security profile`. Now add http://localhost:3000 to the `Allowed origins` and http://localhost:3000/authresponse to the `Allowed return URLs`. Now refresh the browser window with the original error.
 
-8. Enter `sudo reboot` to reboot the Raspberry Pi and complete the installation.
+9. Enter `sudo reboot` to reboot the Raspberry Pi and complete the installation.
 
 ## Running the AVS SDK Sample App
 The automated installation script creates a number of aliases which can be used to execute the AVS Device SDK client, or run the unit tests:
