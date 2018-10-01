@@ -3,6 +3,7 @@
 ## 1.5.1
 
   * Moved some AVS-specific instructions from getting started guide document
+  * Stop on error in either the RPI setup or AVS SDK scripts
   * Added a check of SDK folder and version
 
 ## 1.5.0
