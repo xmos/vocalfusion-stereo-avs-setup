@@ -5,6 +5,7 @@
   * Moved some AVS-specific instructions from getting started guide document
   * Stop on error in either the RPI setup or AVS SDK scripts
   * Added a check of SDK folder and version
+  * Using vocalfusion-rpi-setup v1.2.1. [See details here](https://github.com/xmos/vocalfusion-rpi-setup/blob/v1.2.1/CHANGELOG.md).
 
 ## 1.5.0
 
